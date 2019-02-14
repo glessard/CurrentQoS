@@ -25,6 +25,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0357CD3D2215FEE900F4B44B /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		0357CD412215FF5C00F4B44B /* install-swift.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "install-swift.sh"; path = "../Tests/install-swift.sh"; sourceTree = "<group>"; };
+		0357CD422215FF5C00F4B44B /* test-script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "test-script.sh"; path = "../Tests/test-script.sh"; sourceTree = "<group>"; };
 		03840EA821769D5400F4B44B /* CurrentQoS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CurrentQoS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03840EAB21769D5400F4B44B /* CurrentQoS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentQoS.h; sourceTree = "<group>"; };
 		03840EAC21769D5400F4B44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,9 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0357CD402215FEFF00F4B44B /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0357CD412215FF5C00F4B44B /* install-swift.sh */,
+				0357CD422215FF5C00F4B44B /* test-script.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
 		03840E9E21769D5400F4B44B = {
 			isa = PBXGroup;
 			children = (
+				0357CD3D2215FEE900F4B44B /* Package.swift */,
+				0357CD402215FEFF00F4B44B /* Scripts */,
 				03840EAA21769D5400F4B44B /* CurrentQoS */,
 				03840EB521769D5400F4B44B /* CurrentQoSTests */,
 				03840EA921769D5400F4B44B /* Products */,
