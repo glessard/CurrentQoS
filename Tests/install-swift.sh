@@ -3,12 +3,7 @@ set -e
 
 if [[ -n "$SWIFT" ]]
 then
-  if [[ -n "$VERSION" ]]
-  then
-    export LANGUAGE_VERSION="${VERSION}"
-  fi
   export COMPILER_VERSION=$SWIFT
-  export COMPILER_MAJOR_VERSION=`echo $SWIFT | awk -F . '{print $1}'`
 
   COMPILER="swift-${COMPILER_VERSION}-RELEASE"
   BRANCH="swift-${COMPILER_VERSION}-release"
@@ -29,7 +24,6 @@ then
 elif [[ -z $(which swift) ]]
 then
   echo "Set SWIFT to define which compiler version to install"
-  echo "Set VERSION to define which (non-default) language version to compile with"
   exit 1
 fi
 
