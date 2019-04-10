@@ -39,6 +39,7 @@
 		03840EC621769E8A00F4B44B /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = ../../Tests/LinuxMain.swift; sourceTree = "<group>"; };
 		03840EC721769E8A00F4B44B /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XCTestManifests.swift; path = ../../Tests/CurrentQoSTests/XCTestManifests.swift; sourceTree = "<group>"; };
 		03840EC821769E8A00F4B44B /* CurrentQoSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentQoSTests.swift; path = ../../Tests/CurrentQoSTests/CurrentQoSTests.swift; sourceTree = "<group>"; };
+		03F60E14225DBB6700F4B44B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 			children = (
 				0357CD3D2215FEE900F4B44B /* Package.swift */,
 				0357CD43221600E700F4B44B /* Package@swift-4.swift */,
+				03F60E14225DBB6700F4B44B /* .travis.yml */,
 				0357CD402215FEFF00F4B44B /* Scripts */,
 				03840EAA21769D5400F4B44B /* CurrentQoS */,
 				03840EB521769D5400F4B44B /* CurrentQoSTests */,
