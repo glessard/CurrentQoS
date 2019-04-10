@@ -10,16 +10,17 @@ final class CurrentQoSTestCase: XCTestCase
     let requested = DispatchQoS(qosClass: .userInitiated, relativePriority: -1)
     let q = DispatchQueue(label: "", qos: requested)
 
-    let e = expectation(description: "\(#function)")
+    let e = expectation(description: #function)
     q.async {
-      #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
       let current = DispatchQoS.current
       XCTAssert(current.qosClass == requested.qosClass)
       XCTAssert(current.relativePriority == 0) // can't get relative priority without knowing the queue
+#endif
+
+#if swift(>=5.0) || os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
       XCTAssert(q.qos == requested)
-      #else
-      XCTAssert(q.qos == .unspecified, "swift-corelibs-libdispatch has changed")
-      #endif
+#endif
       e.fulfill()
     }
 
@@ -37,9 +38,9 @@ final class BetterQoSTestCase: XCTestCase
     {
       for (re,rq) in classes.enumerated()
       {
-        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
         XCTAssertEqual(lq.isBetterThan(rq), lq.rawValue.rawValue > rq.rawValue.rawValue)
-        #endif
+#endif
         XCTAssertEqual(lq.isBetterThan(rq), le > re)
       }
     }
