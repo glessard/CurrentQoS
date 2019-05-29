@@ -18,7 +18,7 @@ final class CurrentQoSTestCase: XCTestCase
       XCTAssert(current.relativePriority == 0) // can't get relative priority without knowing the queue
 #endif
 
-#if swift(>=5.0) || os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+#if compiler(>=5.0) || os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
       XCTAssert(q.qos == requested)
 #endif
       e.fulfill()

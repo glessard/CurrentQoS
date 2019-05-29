@@ -13,5 +13,5 @@ let package = Package(
     .target(name: "CurrentQoS", dependencies: []),
     .testTarget(name: "CurrentQoSTests", dependencies: ["CurrentQoS"]),
   ],
-  swiftLanguageVersions: [.v4, .v4_2, .version("5")]
+  swiftLanguageVersions: [.v4_2, .version("5")]
 )
